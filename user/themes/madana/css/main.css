@@ -1,0 +1,144 @@
+/*Base Editing, make it Better*/
+body{
+	margin: 0; padding: 0;
+}
+
+/*Header*/
+#header{
+	background-color: #343434;
+	margin: 0;
+}
+
+	/*Logo*/
+	#header #logo{
+		display: block;
+		margin: auto;
+		background: url('../images/logo.png');
+		width: 240px; height: 200px;
+		background-repeat: none;
+		background-size: 100% 100%;
+	}
+	/* Tukar Bahasa */
+	.bahasa {
+		float:right;
+		padding: 10px;
+	}
+	.bahasa ul{
+		margin: 0;
+		padding: 0;
+	}
+	.bahasa ul li{
+		display: inline-block;
+	}
+	.bahasa ul li a{
+		color: white;
+	}
+	.bahasa ul li a.active{
+		font-weight: bold;
+	}
+	
+/*Navigation*/
+
+.navbar-nav,.navbar-nav>li{
+	float: none;
+}
+.navbar-nav>li{
+	display: inline-block;
+}
+
+.navbar{
+	text-align: center;
+	background-color: #484848;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-default .navbar-nav>.active>a{
+	color: black;
+}
+
+.dropdown:hover  .dropdown-menu{
+	display: block;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color : white;
+}
+
+/*Footer*/
+.footer{
+	background-color:#66C4B2;
+	text-align: center;
+	padding: 30px;
+}
+
+/* Grav Principle */
+/* Typography */
+
+/* Tables */
+table {
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    margin: 30px 0;
+}
+
+th {
+    font-weight: bold;
+    background: #f9f9f9;
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #f0f0f0;
+}
+
+/* Notice Styles */
+blockquote {
+    padding: 0 0 0 20px !important;
+    font-size: 16px;
+    color: #666;
+}
+blockquote > blockquote > blockquote {
+    margin: 0;
+}
+
+blockquote > blockquote > blockquote p {
+    padding: 15px;
+    display: block;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border: 1px solid #f0f0f0;
+}
+
+blockquote > blockquote > blockquote > p {
+    /* Yellow */
+    margin-left: -75px;
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+blockquote > blockquote > blockquote > blockquote > p {
+    /* Red */
+    margin-left: -100px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+blockquote > blockquote > blockquote > blockquote > blockquote > p {
+    /* Blue */
+    margin-left: -125px;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p {
+    /* Green */
+    margin-left: -150px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}

@@ -1,0 +1,11 @@
+email: melon@sharkware.xyz
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+fullname: 'Gabriel Andreas'
+title: 'Mr MelonAir'
+state: enabled
+hashed_password: $2y$10$9Diy3jMtWqtaiiVzIKPBLeE.KyNu7nYfBiIg6x0ytnFSywe4aL9pi

@@ -1,0 +1,16 @@
+title: 'Moji Team'
+author:
+  name: 'IT Division'
+  email: moji@sharkware.xyz
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Moji on craft tile website is a great one'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

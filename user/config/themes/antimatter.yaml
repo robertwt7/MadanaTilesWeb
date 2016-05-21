@@ -1,0 +1,10 @@
+enabled: true
+default_lang: en
+dropdown:
+  enabled: true
+streams:
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      paths:
+        - user/themes/antimatter

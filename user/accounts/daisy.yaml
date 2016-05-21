@@ -1,0 +1,9 @@
+email: daisy@me.com
+access:
+  admin:
+    login: true
+    super: true
+fullname: 'Daisy Cyalalala'
+title: Daisy
+state: enabled
+hashed_password: $2y$10$t.T0flHX163m1deJ.mLW7O7CsohiBlbzRZxMrRsMhWK6/MRR6OmGC

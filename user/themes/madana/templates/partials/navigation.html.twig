@@ -1,0 +1,60 @@
+{#Ini untuk load sampai ke Childnya - Based On Antimetter Grav#}
+{% macro loopc(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+        <li class="{{ current_page }}">
+            <a href="{{ p.url }}">
+                {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+                {{ p.menu }}
+            </a>
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro loop(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+            {% if p.children.visible.count > 0 %}
+				<li class="{{ current_page }} dropdown">
+					<a href="{{ p.url }}" class="drop-toggle">
+						{% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+						{{ p.menu }} <span class="caret"></span>
+					</a>				
+					<ul class="dropdown-menu">
+						{{ _self.loopc(p) }}
+					</ul>
+				</li>
+			{% else %}
+				<li class="{{ current_page }}">
+					<a href="{{ p.url }}">
+						{% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+						{{ p.menu }}
+					</a>				
+				</li>
+            {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{# Third finding : Benyamin Limanto 2016 #}
+{# ----- Mencari Anak di setelah 3 ----- #}
+{# ---- Jalan kalau parent ditempati --- #}
+{# ----- Mencari Anak di setelah 3 ----- #}
+{% macro third(page) %}
+    {% for p in page.children.visible %}
+            {% if p.children.count > 0 and (p.active or p.activeChild)%}
+				{% for pp in p.children %}
+					    {% if pp.children.visible.count > 0 %}
+							<ul class="nav navbar-nav navbar-child">
+								{{ _self.loopc(pp) }}
+							</ul>
+						{% endif %}
+				{% endfor %}
+            {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+<ul class="nav navbar-nav">
+    {{ _self.loop(pages) }}
+</ul>
+
+{{ _self.third(pages) }}

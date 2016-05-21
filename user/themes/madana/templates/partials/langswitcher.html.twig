@@ -1,0 +1,23 @@
+{# Based on langswitcher.html.twig from Grav team #}
+{# https://github.com/getgrav/grav-plugin-langswitcher/blob/develop/templates/partials/langswitcher.html.twig#}
+{# Modified for use of Madana Web#}
+{# Benyamin Limanto - (C) 2016#}
+{# language.nativeName|capitalize - dapatkan nama language full #}
+
+<ul class="langswitcher">
+{% set langobj = grav['language'] %}
+
+{% for key, language in langswitcher.languages %}
+
+    {% if key == langswitcher.current %}
+        {% set lang_url = page.url %}
+        {% set active_class = ' active' %}
+    {% else %}
+        {% set lang_url = base_url_simple ~ langobj.getLanguageURLPrefix(key)~langswitcher.page_route ?: '/' %}
+        {% set active_class = '' %}
+    {% endif %}
+
+    <li><a href="{{ lang_url ~ uri.params }}" class="external{{ active_class }}">{{ key|upper }}</a></li>{# Text to Upper #}
+
+{% endfor %}
+</ul>
