@@ -14,3 +14,8 @@ From: @BenyaminL
 I'm playing with this thing :v:
 
 Just Kidding
+
+______________________________________________________
+Whole is bassed on Grav, Symphony, and you know it's PHP , JS, CSS aaaa...
+
+This thing use twig code, also Markdown of... who, I lost what I'm talking
