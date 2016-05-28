@@ -16,9 +16,9 @@
         {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
             {% if p.children.visible.count > 0 %}
 				<li class="{{ current_page }} dropdown">
-					<a href="{{ p.url }}" class="drop-toggle">
+					<a href="{{ p.url }}" class="drop-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						{% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-						{{ p.menu }} <span class="caret"></span>
+						{{ p.menu }} <span class="diamond-icon"></span>
 					</a>				
 					<ul class="dropdown-menu">
 						{{ _self.loopc(p) }}

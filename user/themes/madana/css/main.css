@@ -14,7 +14,7 @@ body{
 		display: block;
 		margin: auto;
 		background: url('../images/logo.png');
-		width: 240px; height: 200px;
+		width: 170px; height: 140px;
 		background-repeat: none;
 		background-size: 100% 100%;
 	}
@@ -22,6 +22,8 @@ body{
 	.bahasa {
 		float:right;
 		padding: 10px;
+		margin-top: 40px;
+		margin-right: 10%;
 	}
 	.bahasa ul{
 		margin: 0;
@@ -29,47 +31,95 @@ body{
 	}
 	.bahasa ul li{
 		display: inline-block;
+		margin-left: 6px;
 	}
 	.bahasa ul li a{
 		color: white;
+		display: block;
+		padding: 10px;
+		background: url("../Images/lang.png");
+		background-size: 100% 100%;
+		width: 40px;
+		height: 40px;
+		text-align: center;
 	}
 	.bahasa ul li a.active{
 		font-weight: bold;
 	}
+	.bahasa ul li a:hover{
+		text-decoration: none;
+	}
 	
 /*Navigation*/
-
-.navbar-nav,.navbar-nav>li{
-	float: none;
+@media only screen and (min-width: 768px) {		
+	.navbar-nav,.navbar-nav>li,.navbar{
+		float: none;
+		text-align: center; 	
+		color : white;
+		background-color: #484848;
+	}
+	.navbar-nav>li{
+		display: inline-block;
+	}	
+	.dropdown:hover  .dropdown-menu{
+		display: block;
+	}
+	.dropdown-menu,.dropdown-menu>li:hover, .dropdown-menu >li>a:hover{
+		background-color: #A0A0A0;
+	}
+	.navbar-nav>li>.dropdown-menu{
+		border-radius: 0px;
+		margin-top: -1px;
+	}
+	.navbar-nav>li>a{
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	.navbar-default{
+		min-height: 20px;
+	}
 }
-.navbar-nav>li{
-	display: inline-block;
+
+.navbar-nav,.navbar-header,.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	color : white;
+	background-color: #484848;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover{
+	text-align: center; 	
+	color : white;
+}
+
+.navbar-default .navbar-nav>.open>a{
+	color: black;
+}
+
+.dropdown-menu>li>a,.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+	color: white;
 }
 
 .navbar{
-	text-align: center;
-	background-color: #484848;
 	border: none;
 	border-radius: 0;
 }
 
-.navbar-default .navbar-nav>.active>a{
-	color: black;
-}
-
-.dropdown:hover  .dropdown-menu{
-	display: block;
-}
-
-.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-	color : white;
+.diamond-icon{
+	width: 14px;
+	height: 12px;
+	background: url("../images/Icon.png");
+	background-size: 100% 100%;
+	display: inline-block;
+	margin-bottom: -2px;
 }
 
 /*Footer*/
 .footer{
 	background-color:#66C4B2;
 	text-align: center;
-	padding: 30px;
+	padding: 20px;
+	color: white;
 }
 
 /* Grav Principle */
@@ -142,3 +192,80 @@ blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p 
     background-color: #dff0d8;
     border-color: #d6e9c6;
 }
+
+/* Body */
+#body{
+	margin-bottom : 20px;
+}
+
+
+/* Error */
+#error{
+	text-align: center;
+}
+
+#error H1{
+	font-size: 100px;
+}
+
+#error p{
+	font-size: 40px;
+}
+
+/* Home */
+@media only screen and (min-width: 768px) {	
+	.home .pertama{
+		height: 425px;
+		float: left;
+		width: 200px;
+		margin-left: 100px;
+		background: url("../images/1.jpg");
+		background-size: 130% 100%;
+	}
+	.home .kedua{
+		margin-top: 70px;
+		float: left;
+		width: 140px;
+		height: 300px;
+		margin-left: -40px;
+		background-color: green;
+		background: url("../images/2.jpg");
+		background-size: 100% 100%;
+		box-shadow: 1px 1px 5px 2px #000;
+	}
+	.home .ketiga{
+		margin-top: 140px;
+		float: left;
+		width: 150px;
+		height: 150px;
+		margin-left: -50px;
+		background-color: blue;
+		background: url("../images/3.png");
+		background-size: 100% 100%;
+		box-shadow: -7px 1px 5px 2px #000;
+	}
+	.home .keempat{
+		float: left;
+		max-width: 40%;
+		background: rgba(0,0,0,0.7);
+		margin-left: 20px;
+		margin-top: 140px;
+		height: 150px;
+		overflow-y: scroll;
+		padding: 25px;
+		box-shadow: 1px 1px 2px 1px #000;
+	}
+	.home .kotak{
+		clear:both;
+	}
+	
+	/* Overright The Main Universal CSS*/
+	.home #body{
+		margin-top: -20px;
+		margin-bottom: 0px;
+	}
+	.home{
+		background: url('../images/s.png');
+	}
+}
+/* Home */
