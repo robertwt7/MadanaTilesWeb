@@ -19,3 +19,9 @@ ______________________________________________________
 Whole is bassed on Grav, Symphony, and you know it's PHP , JS, CSS aaaa...
 
 This thing use twig code, also Markdown of... who, I lost what I'm talking
+
+--------------------------------------------------------------
+Dokumentasi Halaman CSS,  dipisah untuk menghindari masalah:
+1. Home
+    - Class : home
+2. About
