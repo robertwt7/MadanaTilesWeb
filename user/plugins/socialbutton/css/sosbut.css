@@ -1,0 +1,38 @@
+.sbut{
+    float: left;
+    margin-top: 40px;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+.sbut .sos{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.sos li{
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.sos li a{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.sos .fb{
+    background-image: url("fb.png");
+    background-size: 100% 100%;
+}
+
+.sos .tw{
+    background-image: url("tw.png");
+    background-size: 100% 100%;
+}
+
+.sos .ig{
+    background-image: url("ig.png");
+    background-size: 100% 100%;
+}

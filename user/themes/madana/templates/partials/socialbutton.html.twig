@@ -1,0 +1,17 @@
+<ul class="sos">
+    {%if sosbut.ienabled %}
+        <li class="ig">
+            <a href="{{ sosbut.instagramloc }}"></a>
+        <li>
+    {% endif %}
+    {%if sosbut.fenabled %}
+        <li class="fb">
+            <a href="{{ sosbut.facebookloc }}"></a>
+        <li>
+    {% endif %}
+    {%if sosbut.tenabled %}
+        <li class="tw">
+            <a href="{{ sosbut.twitterloc }}"></a>
+        <li>
+    {% endif %}
+</ul>
