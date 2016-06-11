@@ -13,6 +13,7 @@
 		{#Ini angka 101, 10 adalah default, 1 adalah urutan penempatan, 1 berarti duluan diatas#}
 		{% do assets.addCss('theme://css/main.css',101) %}
 		{% do assets.addCss('theme://css/bootstrap.min.css',102) %}
+		{% do assets.addCss('theme://css/pages.css',103) %}
     {% endblock %}
 	{#Rendering CSS Below...#}
     {{ assets.css() }}
@@ -34,6 +35,13 @@
         {% block header %}
         <header id="header">
 			<div class="container">
+                <div class="sbut">
+                    {% block socialbutton %}
+						{% if config.plugins.socialbutton.enabled %}
+						{% include 'partials/socialbutton.html.twig' %}
+						{% endif %}
+					{% endblock %}
+                </div>
 				<div class="bahasa">
 					{# Bahasa Cuman 2 #}
 					{% block langswitcher %}
@@ -72,7 +80,7 @@
         {% endblock %}
 
         {% block body %}
-        <section id="body" class="{{ class }} container">
+        <section id="body" class="container">
             {% block content %}{% endblock %}
         </section>
         {% endblock %}
