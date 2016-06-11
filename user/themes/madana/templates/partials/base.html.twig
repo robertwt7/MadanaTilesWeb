@@ -35,6 +35,13 @@
         {% block header %}
         <header id="header">
 			<div class="container">
+                <div class="sbut">
+                    {% block socialbutton %}
+						{% if config.plugins.socialbutton.enabled %}
+						{% include 'partials/socialbutton.html.twig' %}
+						{% endif %}
+					{% endblock %}
+                </div>
 				<div class="bahasa">
 					{# Bahasa Cuman 2 #}
 					{% block langswitcher %}
