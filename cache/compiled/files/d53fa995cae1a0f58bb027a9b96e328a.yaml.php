@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/xampp/htdocs/grav/user/config/plugins/admin.yaml',
-    'modified' => 1463461718,
+    'modified' => 1464496331,
     'data' => [
         'enabled' => true,
         'route' => '/admin==',
@@ -17,7 +17,7 @@ return [
             'delete_page' => true
         ],
         'edit_mode' => 'normal',
-        'show_github_msg' => true,
+        'show_github_msg' => false,
         'google_fonts' => true,
         'enable_auto_updates_check' => true,
         'popularity' => [

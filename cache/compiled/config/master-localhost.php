@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1463817088,
-    'checksum' => '4e3e54b1e812e5070e1ea8635ebdcd95',
+    'timestamp' => 1465639094,
+    'checksum' => '5fdb2a687daca2110e33afe30e3fc7ee',
     'files' => [
         'user/config' => [
             'media' => [
@@ -11,7 +11,7 @@ return [
             ],
             'plugins/admin' => [
                 'file' => 'user/config/plugins/admin.yaml',
-                'modified' => 1463461718
+                'modified' => 1464496331
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/config/plugins/langswitcher.yaml',
@@ -20,6 +20,10 @@ return [
             'plugins/login' => [
                 'file' => 'user/config/plugins/login.yaml',
                 'modified' => 1463462267
+            ],
+            'plugins/socialbutton' => [
+                'file' => 'user/config/plugins/socialbutton.yaml',
+                'modified' => 1465639093
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -35,7 +39,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1463816054
+                'modified' => 1464497707
             ],
             'themes/antimatter' => [
                 'file' => 'user/config/themes/antimatter.yaml',
@@ -83,7 +87,7 @@ return [
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/plugins/langswitcher/langswitcher.yaml',
-                'modified' => 1463816053
+                'modified' => 1464496300
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
@@ -91,7 +95,11 @@ return [
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1463457310
+                'modified' => 1464442937
+            ],
+            'plugins/socialbutton' => [
+                'file' => 'user/plugins/socialbutton/socialbutton.yaml',
+                'modified' => 1465632290
             ]
         ]
     ],
@@ -111,7 +119,7 @@ return [
                     'delete_page' => true
                 ],
                 'edit_mode' => 'normal',
-                'show_github_msg' => true,
+                'show_github_msg' => false,
                 'google_fonts' => true,
                 'enable_auto_updates_check' => true,
                 'popularity' => [
@@ -253,6 +261,15 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'socialbutton' => [
+                'enabled' => true,
+                'fenabled' => true,
+                'tenabled' => true,
+                'facebookloc' => 'fuckas',
+                'twitterloc' => 'sad',
+                'ienabled' => true,
+                'instagramloc' => 'adsas'
             ]
         ],
         'media' => [
@@ -580,8 +597,8 @@ return [
                 ],
                 'dateformat' => [
                     'default' => 'd-m-Y H:i',
-                    'short' => 'F jS \\a\\t g:ia',
-                    'long' => 'l jS \\of F g:i A'
+                    'short' => 'd-m-y G:i',
+                    'long' => 'D, d M Y G:i:s'
                 ],
                 'publish_dates' => true,
                 'process' => [

@@ -1,5 +1,5 @@
 ---
-title: Rumah
+title: Awal
 body_classes: home
 ---
 

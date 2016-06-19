@@ -120,7 +120,7 @@ class __TwigTemplate_9ee21ce6814e937914379dabf7d6b937e74b099e4ce6cd300ae4937135d
 \t\t\t\t\t<a href=\"";
                     // line 19
                     echo $this->getAttribute($context["p"], "url", array());
-                    echo "\" class=\"drop-toggle\">
+                    echo "\" class=\"drop-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\t\t";
                     // line 20
                     if ($this->getAttribute($this->getAttribute($context["p"], "header", array()), "icon", array())) {
@@ -131,7 +131,7 @@ class __TwigTemplate_9ee21ce6814e937914379dabf7d6b937e74b099e4ce6cd300ae4937135d
                     // line 21
                     echo "\t\t\t\t\t\t";
                     echo $this->getAttribute($context["p"], "menu", array());
-                    echo " <span class=\"caret\"></span>
+                    echo " <span class=\"diamond-icon\"></span>
 \t\t\t\t\t</a>\t\t\t\t
 \t\t\t\t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t";
@@ -274,9 +274,9 @@ class __TwigTemplate_9ee21ce6814e937914379dabf7d6b937e74b099e4ce6cd300ae4937135d
 /*         {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}*/
 /*             {% if p.children.visible.count > 0 %}*/
 /* 				<li class="{{ current_page }} dropdown">*/
-/* 					<a href="{{ p.url }}" class="drop-toggle">*/
+/* 					<a href="{{ p.url }}" class="drop-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">*/
 /* 						{% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}*/
-/* 						{{ p.menu }} <span class="caret"></span>*/
+/* 						{{ p.menu }} <span class="diamond-icon"></span>*/
 /* 					</a>				*/
 /* 					<ul class="dropdown-menu">*/
 /* 						{{ _self.loopc(p) }}*/

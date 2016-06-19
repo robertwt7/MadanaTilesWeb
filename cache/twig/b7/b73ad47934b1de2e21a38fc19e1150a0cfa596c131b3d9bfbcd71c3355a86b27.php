@@ -27,7 +27,7 @@ class __TwigTemplate_3560124ae556539ece1fd44bffa3e81bd9f5e055145323e73683f51bf2a
         // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["langswitcher"]) ? $context["langswitcher"] : null), "languages", array()));
-        foreach ($context['_seq'] as $context["key"] => $context["language"]) {
+        foreach ($context['_seq'] as $context["_key"] => $context["key"]) {
             // line 11
             echo "
     ";
@@ -60,16 +60,16 @@ class __TwigTemplate_3560124ae556539ece1fd44bffa3e81bd9f5e055145323e73683f51bf2a
             echo (isset($context["active_class"]) ? $context["active_class"] : null);
             echo "\">";
             echo twig_upper_filter($this->env, $context["key"]);
-            echo "</a></li>";
-            // line 21
-            echo "
+            echo "</a></li>
+
 ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['key'], $context['language'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['key'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 23
-        echo "</ul>";
+        echo "</ul>
+";
     }
 
     public function getTemplateName()
@@ -84,7 +84,7 @@ class __TwigTemplate_3560124ae556539ece1fd44bffa3e81bd9f5e055145323e73683f51bf2a
 
     public function getDebugInfo()
     {
-        return array (  72 => 23,  65 => 21,  58 => 20,  55 => 19,  52 => 18,  49 => 17,  46 => 16,  43 => 15,  40 => 14,  37 => 13,  35 => 12,  32 => 11,  28 => 10,  25 => 9,  23 => 8,  19 => 6,);
+        return array (  71 => 23,  58 => 20,  55 => 19,  52 => 18,  49 => 17,  46 => 16,  43 => 15,  40 => 14,  37 => 13,  35 => 12,  32 => 11,  28 => 10,  25 => 9,  23 => 8,  19 => 6,);
     }
 }
 /* {# Based on langswitcher.html.twig from Grav team #}*/
@@ -96,7 +96,7 @@ class __TwigTemplate_3560124ae556539ece1fd44bffa3e81bd9f5e055145323e73683f51bf2a
 /* <ul class="langswitcher">*/
 /* {% set langobj = grav['language'] %}*/
 /* */
-/* {% for key, language in langswitcher.languages %}*/
+/* {% for key in langswitcher.languages %}*/
 /* */
 /*     {% if key == langswitcher.current %}*/
 /*         {% set lang_url = page.url %}*/
@@ -106,7 +106,8 @@ class __TwigTemplate_3560124ae556539ece1fd44bffa3e81bd9f5e055145323e73683f51bf2a
 /*         {% set active_class = '' %}*/
 /*     {% endif %}*/
 /* */
-/*     <li><a href="{{ lang_url ~ uri.params }}" class="external{{ active_class }}">{{ key|upper }}</a></li>{# Text to Upper #}*/
+/*     <li><a href="{{ lang_url ~ uri.params }}" class="external{{ active_class }}">{{  key|upper }}</a></li>*/
 /* */
 /* {% endfor %}*/
 /* </ul>*/
+/* */

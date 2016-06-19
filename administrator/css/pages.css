@@ -1,0 +1,35 @@
+.pattern > .col-sm-3 {
+    padding: 5px;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.pattern-block {
+    padding: 4px;
+    background-color: #ffffff;
+}
+
+.pattern-text {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    padding: 14px 0px 14px 0px;
+}
+
+.contact > .row {
+    padding: 4px 20px 4px 20px;
+}
+
+.contact > .row > .col-sm-4 > .row {
+    padding: 3px;
+}
+
+.itemPic {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    padding: 5px;
+    background: black;
+}
