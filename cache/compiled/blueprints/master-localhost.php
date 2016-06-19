@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1463816194,
-    'checksum' => 'fa5bbc13f8683929a72ad91a977d4d3f',
+    'timestamp' => 1465639077,
+    'checksum' => '10057fb59af7ec93bb1c0e217bbebc32',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -41,7 +41,7 @@ return [
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/plugins/langswitcher/blueprints.yaml',
-                'modified' => 1463816053
+                'modified' => 1464496300
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
@@ -49,7 +49,11 @@ return [
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1463457310
+                'modified' => 1464442937
+            ],
+            'plugins/socialbutton' => [
+                'file' => 'user/plugins/socialbutton/blueprints.yaml',
+                'modified' => 1465639048
             ]
         ]
     ],
@@ -1005,6 +1009,103 @@ return [
                     'type' => 'bool'
                 ],
                 'name' => 'plugins.problems.built_in_css'
+            ],
+            'plugins.socialbutton' => [
+                'type' => '_parent',
+                'name' => 'plugins.socialbutton'
+            ],
+            'plugins.socialbutton.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.socialbutton.enabled'
+            ],
+            'plugins.socialbutton.facebook' => [
+                'type' => 'section',
+                'title' => 'Facebook',
+                'underline' => false,
+                'name' => 'plugins.socialbutton.facebook'
+            ],
+            'plugins.socialbutton.fenabled' => [
+                'type' => 'toggle',
+                'label' => 'Enable Facebook Button',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enable',
+                    0 => 'Disable'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.socialbutton.fenabled'
+            ],
+            'plugins.socialbutton.facebookloc' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Fanpage / Profile URL',
+                'placeholder' => 'URL of the page',
+                'name' => 'plugins.socialbutton.facebookloc'
+            ],
+            'plugins.socialbutton.twitter' => [
+                'type' => 'section',
+                'title' => 'Twitter',
+                'name' => 'plugins.socialbutton.twitter'
+            ],
+            'plugins.socialbutton.tenabled' => [
+                'type' => 'toggle',
+                'label' => 'Enable Twitter Button',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enable',
+                    0 => 'Disable'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.socialbutton.tenabled'
+            ],
+            'plugins.socialbutton.twitterloc' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Twitter url',
+                'placeholder' => 'URL of the page',
+                'name' => 'plugins.socialbutton.twitterloc'
+            ],
+            'plugins.socialbutton.instagram' => [
+                'type' => 'section',
+                'title' => 'Instagram',
+                'name' => 'plugins.socialbutton.instagram'
+            ],
+            'plugins.socialbutton.ienabled' => [
+                'type' => 'toggle',
+                'label' => 'Enable Instagram Button',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enable',
+                    0 => 'Disable'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.socialbutton.ienabled'
+            ],
+            'plugins.socialbutton.instagramloc' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Instagram url',
+                'placeholder' => 'URL of the page',
+                'name' => 'plugins.socialbutton.instagramloc'
             ],
             'site' => [
                 'type' => '_parent',
@@ -2383,6 +2484,18 @@ return [
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
                     'built_in_css' => 'plugins.problems.built_in_css'
+                ],
+                'socialbutton' => [
+                    'enabled' => 'plugins.socialbutton.enabled',
+                    'facebook' => 'plugins.socialbutton.facebook',
+                    'fenabled' => 'plugins.socialbutton.fenabled',
+                    'facebookloc' => 'plugins.socialbutton.facebookloc',
+                    'twitter' => 'plugins.socialbutton.twitter',
+                    'tenabled' => 'plugins.socialbutton.tenabled',
+                    'twitterloc' => 'plugins.socialbutton.twitterloc',
+                    'instagram' => 'plugins.socialbutton.instagram',
+                    'ienabled' => 'plugins.socialbutton.ienabled',
+                    'instagramloc' => 'plugins.socialbutton.instagramloc'
                 ]
             ],
             'site' => [

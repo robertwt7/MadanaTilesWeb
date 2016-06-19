@@ -2,10 +2,10 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/xampp/htdocs/grav/user/plugins/langswitcher/blueprints.yaml',
-    'modified' => 1463816053,
+    'modified' => 1464496300,
     'data' => [
         'name' => 'LangSwitcher',
-        'version' => '1.2.0',
+        'version' => '1.2.1',
         'description' => 'LangSwitcher is a [Grav](http://github.com/getgrav/grav) plugin that provides native language text links to switch between [multiple languages](http://learn.getgrav.org/content/multi-language) in Grav **v0.9.30** or greater.',
         'icon' => 'globe',
         'author' => [

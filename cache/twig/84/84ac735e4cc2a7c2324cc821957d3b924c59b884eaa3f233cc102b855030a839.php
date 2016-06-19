@@ -14,6 +14,7 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
             'stylesheets' => array($this, 'block_stylesheets'),
             'javascripts' => array($this, 'block_javascripts'),
             'header' => array($this, 'block_header'),
+            'socialbutton' => array($this, 'block_socialbutton'),
             'langswitcher' => array($this, 'block_langswitcher'),
             'header_navigation' => array($this, 'block_header_navigation'),
             'body' => array($this, 'block_body'),
@@ -35,26 +36,26 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
 ";
         // line 5
         $this->displayBlock('head', $context, $blocks);
-        // line 32
+        // line 33
         echo "</head>
 <body class=\"";
-        // line 33
+        // line 34
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "body_classes", array());
         echo "\">
         ";
-        // line 34
+        // line 35
         $this->displayBlock('header', $context, $blocks);
-        // line 73
+        // line 81
         echo "
         ";
-        // line 74
+        // line 82
         $this->displayBlock('body', $context, $blocks);
-        // line 79
+        // line 87
         echo "\t\t
         ";
-        // line 80
+        // line 88
         $this->displayBlock('footer', $context, $blocks);
-        // line 83
+        // line 91
         echo "</body>
 </html>
 ";
@@ -86,15 +87,15 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
     ";
         // line 12
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 17
-        echo "\t";
         // line 18
+        echo "\t";
+        // line 19
         echo "    ";
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "css", array(), "method");
         echo "
 \t
 \t";
-        // line 20
+        // line 21
         $this->displayBlock('javascripts', $context, $blocks);
     }
 
@@ -110,56 +111,65 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
         echo "\t\t";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/bootstrap.min.css", 1 => 102), "method");
         // line 16
+        echo "\t\t";
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addCss", array(0 => "theme://css/pages.css", 1 => 103), "method");
+        // line 17
         echo "    ";
     }
 
-    // line 20
+    // line 21
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 21
-        echo "\t\t";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", 1 => 101), "method");
         // line 22
         echo "\t\t";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "theme://js/bootstrap.min.js"), "method");
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js", 1 => 101), "method");
         // line 23
+        echo "\t\t";
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "theme://js/bootstrap.min.js"), "method");
+        // line 24
         echo "
 \t\t";
-        // line 24
+        // line 25
         if (((($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getBrowser", array()) == "msie") && ($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getVersion", array()) >= 8)) && ($this->getAttribute((isset($context["browser"]) ? $context["browser"] : null), "getVersion", array()) <= 9))) {
-            // line 25
-            echo "\t\t\t";
-            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"), "method");
             // line 26
             echo "\t\t\t";
-            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"), "method");
+            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"), "method");
             // line 27
+            echo "\t\t\t";
+            $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"), "method");
+            // line 28
             echo "\t\t";
         }
-        // line 28
+        // line 29
         echo "
 \t\t";
-        // line 29
+        // line 30
         echo $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "js", array(), "method");
         echo "
 \t";
     }
 
-    // line 34
+    // line 35
     public function block_header($context, array $blocks = array())
     {
-        // line 35
+        // line 36
         echo "        <header id=\"header\">
 \t\t\t<div class=\"container\">
+                <div class=\"sbut\">
+                    ";
+        // line 39
+        $this->displayBlock('socialbutton', $context, $blocks);
+        // line 44
+        echo "                </div>
 \t\t\t\t<div class=\"bahasa\">
 \t\t\t\t\t";
-        // line 39
+        // line 47
         echo "\t\t\t\t\t";
         $this->displayBlock('langswitcher', $context, $blocks);
-        // line 44
+        // line 52
         echo "\t\t\t\t</div>
 \t\t\t\t<a href=\"";
-        // line 45
+        // line 53
         echo ((((isset($context["base_url"]) ? $context["base_url"] : null) == "")) ? ("/") : ((isset($context["base_url"]) ? $context["base_url"] : null)));
         echo "\" id=\"logo\"></a>
 \t\t\t\t
@@ -180,12 +190,12 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
 \t\t\t<!-- Collect the nav links, forms, and other content for toggling -->
 \t\t\t<div id=\"navbar\" class=\"collapse navbar-collapse\">
 \t\t\t\t";
-        // line 64
+        // line 72
         echo "\t\t\t\t";
         $this->displayBlock('header_navigation', $context, $blocks);
-        // line 67
+        // line 75
         echo "\t\t\t\t";
-        // line 68
+        // line 76
         echo "\t\t\t</div><!-- /.navbar-collapse -->
 \t\t  </div><!-- /.container-fluid -->
 \t\t</nav>
@@ -194,14 +204,14 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
     }
 
     // line 39
-    public function block_langswitcher($context, array $blocks = array())
+    public function block_socialbutton($context, array $blocks = array())
     {
         // line 40
         echo "\t\t\t\t\t\t";
-        if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "langswitcher", array()), "enabled", array())) {
+        if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "socialbutton", array()), "enabled", array())) {
             // line 41
             echo "\t\t\t\t\t\t";
-            $this->loadTemplate("partials/langswitcher.html.twig", "partials/base.html.twig", 41)->display($context);
+            $this->loadTemplate("partials/socialbutton.html.twig", "partials/base.html.twig", 41)->display($context);
             // line 42
             echo "\t\t\t\t\t\t";
         }
@@ -209,43 +219,57 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
         echo "\t\t\t\t\t";
     }
 
-    // line 64
+    // line 47
+    public function block_langswitcher($context, array $blocks = array())
+    {
+        // line 48
+        echo "\t\t\t\t\t\t";
+        if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "plugins", array()), "langswitcher", array()), "enabled", array())) {
+            // line 49
+            echo "\t\t\t\t\t\t";
+            $this->loadTemplate("partials/langswitcher.html.twig", "partials/base.html.twig", 49)->display($context);
+            // line 50
+            echo "\t\t\t\t\t\t";
+        }
+        // line 51
+        echo "\t\t\t\t\t";
+    }
+
+    // line 72
     public function block_header_navigation($context, array $blocks = array())
     {
-        // line 65
+        // line 73
         echo "\t\t\t\t";
-        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 65)->display($context);
-        // line 66
+        $this->loadTemplate("partials/navigation.html.twig", "partials/base.html.twig", 73)->display($context);
+        // line 74
         echo "\t\t\t\t";
     }
 
-    // line 74
+    // line 82
     public function block_body($context, array $blocks = array())
     {
-        // line 75
-        echo "        <section id=\"body\" class=\"";
-        echo (isset($context["class"]) ? $context["class"] : null);
-        echo " container\">
+        // line 83
+        echo "        <section id=\"body\" class=\"container\">
             ";
-        // line 76
+        // line 84
         $this->displayBlock('content', $context, $blocks);
-        // line 77
+        // line 85
         echo "        </section>
         ";
     }
 
-    // line 76
+    // line 84
     public function block_content($context, array $blocks = array())
     {
     }
 
-    // line 80
+    // line 88
     public function block_footer($context, array $blocks = array())
     {
-        // line 81
+        // line 89
         echo "\t\t\t";
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 81)->display($context);
-        // line 82
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 89)->display($context);
+        // line 90
         echo "        ";
     }
 
@@ -261,7 +285,7 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
 
     public function getDebugInfo()
     {
-        return array (  249 => 82,  246 => 81,  243 => 80,  238 => 76,  233 => 77,  231 => 76,  226 => 75,  223 => 74,  219 => 66,  216 => 65,  213 => 64,  209 => 43,  206 => 42,  203 => 41,  200 => 40,  197 => 39,  189 => 68,  187 => 67,  184 => 64,  163 => 45,  160 => 44,  157 => 39,  152 => 35,  149 => 34,  143 => 29,  140 => 28,  137 => 27,  134 => 26,  131 => 25,  129 => 24,  126 => 23,  123 => 22,  120 => 21,  117 => 20,  113 => 16,  110 => 15,  107 => 14,  105 => 13,  102 => 12,  98 => 20,  92 => 18,  90 => 17,  88 => 12,  83 => 10,  79 => 9,  70 => 7,  67 => 6,  64 => 5,  58 => 83,  56 => 80,  53 => 79,  51 => 74,  48 => 73,  46 => 34,  42 => 33,  39 => 32,  37 => 5,  31 => 2,  28 => 1,);
+        return array (  273 => 90,  270 => 89,  267 => 88,  262 => 84,  257 => 85,  255 => 84,  252 => 83,  249 => 82,  245 => 74,  242 => 73,  239 => 72,  235 => 51,  232 => 50,  229 => 49,  226 => 48,  223 => 47,  219 => 43,  216 => 42,  213 => 41,  210 => 40,  207 => 39,  199 => 76,  197 => 75,  194 => 72,  173 => 53,  170 => 52,  167 => 47,  163 => 44,  161 => 39,  156 => 36,  153 => 35,  147 => 30,  144 => 29,  141 => 28,  138 => 27,  135 => 26,  133 => 25,  130 => 24,  127 => 23,  124 => 22,  121 => 21,  117 => 17,  114 => 16,  111 => 15,  108 => 14,  106 => 13,  103 => 12,  99 => 21,  93 => 19,  91 => 18,  89 => 12,  84 => 10,  80 => 9,  71 => 7,  68 => 6,  65 => 5,  59 => 91,  57 => 88,  54 => 87,  52 => 82,  49 => 81,  47 => 35,  43 => 34,  40 => 33,  38 => 5,  32 => 2,  29 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -279,6 +303,7 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
 /* 		{#Ini angka 101, 10 adalah default, 1 adalah urutan penempatan, 1 berarti duluan diatas#}*/
 /* 		{% do assets.addCss('theme://css/main.css',101) %}*/
 /* 		{% do assets.addCss('theme://css/bootstrap.min.css',102) %}*/
+/* 		{% do assets.addCss('theme://css/pages.css',103) %}*/
 /*     {% endblock %}*/
 /* 	{#Rendering CSS Below...#}*/
 /*     {{ assets.css() }}*/
@@ -300,6 +325,13 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
 /*         {% block header %}*/
 /*         <header id="header">*/
 /* 			<div class="container">*/
+/*                 <div class="sbut">*/
+/*                     {% block socialbutton %}*/
+/* 						{% if config.plugins.socialbutton.enabled %}*/
+/* 						{% include 'partials/socialbutton.html.twig' %}*/
+/* 						{% endif %}*/
+/* 					{% endblock %}*/
+/*                 </div>*/
 /* 				<div class="bahasa">*/
 /* 					{# Bahasa Cuman 2 #}*/
 /* 					{% block langswitcher %}*/
@@ -338,7 +370,7 @@ class __TwigTemplate_2aa15b5b2ebd10951a3ca696027b1488b9403e9842a670fb7dcbfe0c691
 /*         {% endblock %}*/
 /* */
 /*         {% block body %}*/
-/*         <section id="body" class="{{ class }} container">*/
+/*         <section id="body" class="container">*/
 /*             {% block content %}{% endblock %}*/
 /*         </section>*/
 /*         {% endblock %}*/

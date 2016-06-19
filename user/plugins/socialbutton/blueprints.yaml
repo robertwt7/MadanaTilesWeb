@@ -1,7 +1,7 @@
 name: SocialButton
 version: 0.0.1
 description: Social Button for Madana Web Tiles
-icon: globe
+icon: share-alt
 author:
   name: Benyamin
   email: me@benyamin.xyz

@@ -2,15 +2,13 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/xampp/htdocs/grav/user/config/system.yaml',
-    'modified' => 1463816054,
+    'modified' => 1464497707,
     'data' => [
         'absolute_urls' => false,
         'timezone' => 'Asia/Jakarta',
-        'default_locale' => NULL,
         'param_sep' => ':',
         'wrapped_site' => false,
         'reverse_proxy_setup' => false,
-        'proxy_url' => NULL,
         'languages' => [
             'supported' => [
                 0 => 'en',
@@ -38,8 +36,8 @@ return [
             ],
             'dateformat' => [
                 'default' => 'd-m-Y H:i',
-                'short' => 'F jS \\a\\t g:ia',
-                'long' => 'l jS \\of F g:i A'
+                'short' => 'd-m-y G:i',
+                'long' => 'D, d M Y G:i:s'
             ],
             'publish_dates' => true,
             'process' => [
@@ -70,7 +68,6 @@ return [
                 5 => 'rss',
                 6 => 'atom'
             ],
-            'append_url_extension' => '',
             'expires' => 604800,
             'last_modified' => false,
             'etag' => false,
@@ -139,13 +136,7 @@ return [
         ],
         'media' => [
             'enable_media_timestamp' => false,
-            'upload_limit' => 0,
-            'unsupported_inline_types' => [
-                
-            ],
-            'allowed_fallback_types' => [
-                
-            ]
+            'upload_limit' => 0
         ],
         'session' => [
             'enabled' => true,
