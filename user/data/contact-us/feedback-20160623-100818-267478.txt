@@ -1,0 +1,5 @@
+Contact form 
+
+name: Benyamin Limanto
+email: me@benyamin.xyz
+pesan: Ya coba lagi ben

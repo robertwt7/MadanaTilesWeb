@@ -1,183 +1,39 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<div class="container-fluid text-center" style="background-color: #ffeeee">
-        <br><br><h3>SQUARE</h3><br>
-        <div class="row pattern">
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
+<div class="container"><br><br>
+        <div class="row text-center"><span class="dot3"></span>
+            <h3 style="display:inline-block"> PATTERN </h3>
+            <span class="dot3"></span><br></div>
+        <div class="row"><br>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+            <h3 id="sq">SQUARE</h3><br>
+                <div class="row pattern">
+                    {{ bagianS() }}
+                    {#div closenya ada di php#}
+            <br><br><br>
+            <h3 id="he">HEXAGONAL</h3><br>
+                <div class="row pattern">
+                    {{ bagianH() }}
+                    {#div closenya ada di php#}
+            <br><br><br>
+            <br><br><br>
+            <h3 id="etc">COLONIAL</h3><br>
+                <div class="row pattern">
+                    {{ bagianE() }}
             </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div><br><br><br><br><br>
+    <div id="zoomshow">
+        <div>
+            <div class="pattern-block">
+                <button role="button" class="btn btn-default" id="closezoom">X</button>
+                <img class="img-responsive zoomi">
+                <div class="pattern-text"></div>
             </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-        </div><br>
-        <div class="row pattern">
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-        </div><br>
-        <div class="row">
-            <img src="#" class="img-responsive" style="margin:auto" alt="more">
-        </div><br>
-        <div class="row">
-            <img src="#" alt="line">
-        </div><br><br>
-        <h3>HEXAGONAL</h3><br>
-        <div class="row pattern">
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-        </div><br>
-        <div class="row pattern">
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-        </div><br>
-        <div class="row">
-            <img src="#" class="img-responsive" style="margin:auto" alt="more">
-        </div><br>
-        <div class="row">
-            <img src="#" alt="line">
-        </div><br><br>
-        <h3>COLONIAL</h3><br>
-        <div class="row pattern">
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-        </div><br>
-        <div class="row pattern">
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="pattern-block">
-                    <img src="#" class="img-responsive" style="width:100%;margin:5px" alt="pattern1">
-                    <div class="pattern-text">TYPE NAME</div>
-                </div>
-            </div>
-        </div><br>
-        <div class="row">
-            <img src="#" class="img-responsive" style="margin:auto" alt="more">
-        </div><br>
-        <div class="row">
-            <img src="#" alt="line">
-        </div><br><br>
+        </div>
     </div>
+</div>
 {% endblock %}

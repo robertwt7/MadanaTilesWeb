@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+		{#Ini angka 101, 10 adalah default, 1 adalah urutan penempatan, 1 berarti duluan diatas#}
+		{% do assets.addCss('theme://css/main.css',101) %}
+		{% do assets.addCss('theme://css/bootstrap.min.css',102) %}
+		{% do assets.addCss('theme://css/pages.css',103) %}
+    {% endblock %}
+	{#Rendering CSS Below...#}
+    {{ assets.css() }}
+	
+	{% block javascripts %}
+		{% do assets.add('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', 101) %}
+		{% do assets.add('theme://js/bootstrap.min.js') %}
+
+		{% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+			{% do assets.add('https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js') %}
+			{% do assets.add('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') %}
+		{% endif %}
+
+		{{ assets.js() }}
+	{% endblock %}
+{% endblock head%}
+</head>
+<body class="{{ page.header.body_classes }}">
+        {% block header %}
+        <header id="header">
+			<div class="container">
+                <div class="sbut">
+                    {% block socialbutton %}
+						{% if config.plugins.socialbutton.enabled %}
+						{% include 'partials/socialbutton.html.twig' %}
+						{% endif %}
+					{% endblock %}
+                </div>
+				<div class="bahasa">
+					{# Bahasa Cuman 2 #}
+					{% block langswitcher %}
+						{% if config.plugins.langswitcher.enabled %}
+						{% include 'partials/langswitcher.html.twig' %}
+						{% endif %}
+					{% endblock %}
+				</div>
+				<a href="{{ base_url == '' ? '/' : base_url }}" id="logo"></a>
+				
+			</div>
+        </header>
+		<nav class="navbar navbar-default" style="margin-bottom:0px;">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div id="navbar" class="collapse navbar-collapse">
+				{#Menu Bar#}
+				{% block header_navigation %}
+				{% include 'partials/navigation.html.twig' %}
+				{% endblock %}
+				{#Menu Bar#}
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		
+        {% endblock %}
+
+        {% block body %}
+        <section id="body" style="margin-bottom:0px;">
+            {% block content %}{% endblock %}
+        </section>
+        {% endblock %}
+		
+        {% block footer %}
+			{% include 'partials/footer.html.twig' %}
+        {% endblock %}
+</body>
+</html>

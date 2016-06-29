@@ -1,0 +1,16 @@
+indoflag.pngy*sqr^indo flag
+nopic1.pngn*sqr^nopic1
+facebook.pngn*etc^fb
+1.pngn*sqr^1
+2.pngn*sqr^2
+3.pngn*sqr^3
+4.pngn*sqr^4
+5.pngn*sqr^5
+6.pngn*sqr^6
+7.pngn*etc^7
+8.pngn*etc^8
+9.pngn*hex^9
+asdasd.pngy*hex^asdasd
+sdsd.pngn*hex^sdsd
+dsa.pngn*hex^dsa
+yes.pngy*hex^yes
