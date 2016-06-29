@@ -1,0 +1,42 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<div class="container"><br><br>
+    <div class="row text-center"><span class="dot3"></span>
+        <h3 style="display:inline-block"> SHAPE </h3>
+        <span class="dot3"></span><br></div>
+    <div class="row"><br>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+    <h4>Enchaustic tile shape</h4><br>
+            <div class="col-sm-4 text-center">
+                <div class="img-responsive" id="shape4"></div><br>
+                20x20cm
+                <h6>SQUARE</h6>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="img-responsive" id="shape2"></div><br>
+                20x20cm
+                <h6>HEXAGONAL</h6>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="img-responsive" id="shape3"></div><br>
+                20x20cm
+                <h6>COLONIAL</h6>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <br><br><br><div class="row text-center"><span class="dot3"></span>
+        <h3 style="display:inline-block"> COLOR </h3>
+        <span class="dot3"></span><br></div><br>
+    <div class="row">
+        {#Tempat warna#}
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            {{ shapecolor() }}
+        </div>
+        <div class="col-sm-2"></div>
+    </div><br><hr><br><br><br><br>
+</div>
+{% endblock %}

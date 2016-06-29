@@ -1,7 +1,18 @@
 ---
-title: Tentang
+title: 'Tentang Kami'
 ---
 
-# Tentang
-## Tekel Semen
-
+<div class="container">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6" style="text-align:right"><br>
+        <span class="dot1"></span>
+        <h1 style="display:inline-block"> Tentang madana tiles </h1>
+        <span class="dot1"></span><br><br>
+        <h3>Apa itu Madana Tiles?</h3><br>
+        <div>Kami MADANA Tile ialah perusahaan tegel semen pertama di kota Surabaya, dan di perusahaan ini kami menghadirkan tegel yang bernuansa seni untuk proyek-proyek anda agar menjadi lebih indah. Dikarenakan sepenuhnya diproduksi dengan tangan, tegel semen MADANA Tile terjamin keaslian dan keunikannya. Dengan proses produksi yang diawasi secara berkala, memungkinkan kami mengontrol seluruh proses dengan jaminan hasil terbaik dan harga yang kompetitif.<br>
+        Tegel semen telah dipakai dan diproduksi di Indonesia selama puluhan bahkan ratusan tahun, dan telah menjadi bagian dari kebudayaan Indonesia, oleh sebab itu, visi kami adalah melestarikan budaya dengan cara memperkenalkan produk kami dan memberikan kesempatan kepada masyarakat dengan membuka lapangan pekerjaan. Tentunya kami juga ingin bekerja sama dengan sebanyak mungkin arsitek, interior desainer, dan pelanggan secara langsung sehingga memungkinkan terciptanya berbagai inovasi dalam desain. Kami memiliki katalog dengan pola dan warna beragam namun pelanggan juga dapat merancang sendiri desain tegel mereka.</div>
+    </div>
+    <div class="col-sm-4">
+        <img id="aboutusimage">
+    </div>
+</div>

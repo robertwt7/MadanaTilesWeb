@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1465639094,
-    'checksum' => '5fdb2a687daca2110e33afe30e3fc7ee',
+    'timestamp' => 1467195143,
+    'checksum' => '3c43bf6856aba17aa5cc880866fac378',
     'files' => [
         'user/config' => [
             'media' => [
@@ -12,6 +12,10 @@ return [
             'plugins/admin' => [
                 'file' => 'user/config/plugins/admin.yaml',
                 'modified' => 1464496331
+            ],
+            'plugins/email' => [
+                'file' => 'user/config/plugins/email.yaml',
+                'modified' => 1467047138
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/config/plugins/langswitcher.yaml',
@@ -39,7 +43,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1464497707
+                'modified' => 1467195138
             ],
             'themes/antimatter' => [
                 'file' => 'user/config/themes/antimatter.yaml',
@@ -93,6 +97,10 @@ return [
                 'file' => 'user/plugins/login/login.yaml',
                 'modified' => 1461784048
             ],
+            'plugins/madanaEngine' => [
+                'file' => 'user/plugins/madanaEngine/madanaEngine.yaml',
+                'modified' => 1467035351
+            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1464442937
@@ -137,18 +145,18 @@ return [
             ],
             'email' => [
                 'enabled' => true,
-                'from' => NULL,
-                'from_name' => NULL,
-                'to' => NULL,
-                'to_name' => NULL,
+                'from' => 'blbenyamin9@gmail.com',
+                'from_name' => 'Benyamin Limanto',
+                'to' => 'blbenyamin9@gmail.com',
+                'to_name' => 'Benyamin Limanto',
                 'mailer' => [
-                    'engine' => 'mail',
+                    'engine' => 'smtp',
                     'smtp' => [
-                        'server' => 'localhost',
-                        'port' => 25,
-                        'encryption' => 'none',
-                        'user' => '',
-                        'password' => ''
+                        'server' => 'smtp.gmail.com',
+                        'port' => 465,
+                        'encryption' => 'ssl',
+                        'user' => 'blbenyamin9@gmail.com',
+                        'password' => '083834457072bbb'
                     ],
                     'sendmail' => [
                         'bin' => '/usr/sbin/sendmail'
@@ -257,6 +265,9 @@ return [
                         ]
                     ]
                 ]
+            ],
+            'madanaEngine' => [
+                'enabled' => true
             ],
             'problems' => [
                 'enabled' => true,

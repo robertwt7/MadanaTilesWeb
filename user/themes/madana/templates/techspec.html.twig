@@ -1,0 +1,18 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8"><br>
+            <span class="dot1"></span>
+            <h1 style="display:inline-block"> Spesifikasi Teknis </h1>
+            <span class="dot1"></span><br><br>
+            <h3>Spesifikasi Produk</h3>
+            <div class="col-sm-8">
+                {{ page.content }}
+            </div>
+            <div class="col-sm-4" style="padding-top:30px"><img id="techpic"></div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+{% endblock %}

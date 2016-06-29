@@ -2,6 +2,139 @@
 body{
 	margin: 0; padding: 0;
 }
+/*awal*/
+.about {
+    background: #ffffff;
+}
+#aboutusimage {
+		display: block;
+		margin: auto;
+		background: url('../images/1.jpg');
+		width: 100%; height: 520px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+#techpic {
+    display: block;
+		margin: auto;
+		background: url('../images/pic9.jpg');
+		width: 100%; height: 520px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+
+.form-control {
+    background: #dddddd;
+}
+
+#msg{
+	display: block;
+    border: 0px;
+		margin: auto;
+		background: url('../images/msg.png');
+		background-repeat: none;
+		width: 80px; height: 80px;
+		background-size: 100% 100%;
+}
+
+#btn1 {
+    display: block;
+    border: 0px;
+		margin: auto;
+		background: url('../images/square.jpg');
+		width: 80px; height: 80px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+#btn2 {
+    display: block;
+    border: 0px;
+		margin: auto;
+		background: url('../images/hex.png');
+		width: 80px; height: 80px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+#btn3 {
+    display: block;
+    border: 0px;
+		margin: auto;
+		background: url('../images/colonial.png');
+		width: 80px; height: 80px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+#map {
+    width: 100%;
+    height: 250px;
+    background: #333333;
+}
+#shape1 {
+    display: block;
+    border: 0px;
+		margin: auto;
+		background: url('../images/pic6.jpg');
+		width: 40px; height: 40px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+
+.tentangtekel {
+    margin: 0px;
+    padding: 0px;
+}
+
+#picl {
+    display: block;
+		background: url('../images/pic3.jpg');
+		width: 100%; height: 880px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+
+#picr {
+    display: block;
+		background: url('../images/pic4.jpg');
+		width: 100%; height: 880px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+
+#pica {
+    display: block;
+		background: url('../images/pic2.jpg');
+		width: 100%; height: 450px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+
+#pat1 {
+    display: block;
+		background: url('../images/pattern1.jpg');
+		width: 100%; height: 450px;
+		background-repeat: repeat;
+}
+
+.dot1 {
+    display: inline-block;
+    border: 0px;
+    margin: 5px;
+		background: url('../images/lang.png');
+        width: 15px; height: 15px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+
+.dot3 {
+    display: inline-block;
+    border: 0px;
+    margin: 2px;
+		background: url('../images/lang.png');
+        width: 12px; height: 12px;
+		background-repeat: none;
+		background-size: 100% 100%;
+}
+/*akhir*/
 
 /*Header*/
 #header{
@@ -37,7 +170,7 @@ body{
 		color: white;
 		display: block;
 		padding: 10px;
-		background: url("../Images/lang.png");
+		background: url("../Images/lang2.png");
 		background-size: 100% 100%;
 		width: 40px;
 		height: 40px;
@@ -61,9 +194,9 @@ body{
 	.navbar-nav>li{
 		display: inline-block;
 	}	
-	.dropdown:hover  .dropdown-menu{
+	/*.dropdown:hover  .dropdown-menu{
 		display: block;
-	}
+	}*/
 	.dropdown-menu,.dropdown-menu>li:hover, .dropdown-menu >li>a:hover{
 		background-color: #A0A0A0;
 	}
@@ -246,12 +379,11 @@ blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p 
 	}
 	.home .keempat{
 		float: left;
-		max-width: 40%;
+		max-width: 50%;
 		background: rgba(0,0,0,0.7);
 		margin-left: 20px;
 		margin-top: 140px;
-		height: 150px;
-		overflow-y: scroll;
+		height: 170px;
 		padding: 25px;
 		box-shadow: 1px 1px 2px 1px #000;
 	}
@@ -266,6 +398,20 @@ blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > p 
 	}
 	.home{
 		background: url('../images/s.png');
+	}
+	.home .keempat{
+		color: white;
+	}
+	.home .labela{
+		color:rgb(102, 196, 178);
+	}
+
+	.home h4{
+		text-align: center;
+	}
+
+	.home p.text-center{
+		font-size: 13px;
 	}
 }
 /* Home */

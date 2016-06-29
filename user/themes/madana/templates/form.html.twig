@@ -1,0 +1,51 @@
+{% extends "partials/base.html.twig" %}
+{# Ketika kita declare halaman form ini sebagai extends atau turunan, maka block yang kosong di halaman yang di extends akan digantikan dengan ini #}
+{% block content %}
+    <div class="container-fluid contact" style="padding: 50px 100px 20px 100px">
+        <div class="row text-center">
+            <span class="dot1"></span>
+            <h1 style="display:inline-block"> CONTACT US </h1>
+            <span class="dot1"></span><br><br>
+        </div>
+        <div class="row">
+            <h4>Get in touch with us!</h4>
+        </div>
+    {% if form.message %}<div class="alert">{{ form.message }}</div>{% endif %}
+    {% set multipart = '' %}
+    {% set method = form.method|upper|default('POST') %}
+
+    {% for field in form.fields %}
+        {% if (method == 'POST' and field.type == 'file') %}
+            {% set multipart = ' enctype="multipart/form-data"' %}
+        {% endif %}
+    {% endfor %}
+    <div class="row">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+            <form name="{{ form.name }}"
+                action="{{ form.action ? base_url ~ form.action : page.url }}"
+                method="{{ method }}"{{ multipart }}>
+
+            {% for field in form.fields %}
+                {% set value = form.value(field.name) %}
+                <div class="row">
+                    {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
+                </div>
+            {% endfor %}
+
+                <div class="buttons">
+                {% for button in form.buttons %}
+                    <button class="{{ button.classes|default('button') }} btn btn-default" id="{{ button.id }}" type="{{ button.type|default('submit') }}">{{ button.value|t|default('Submit') }}</button>
+                {% endfor %}
+                </div>
+
+            {{ nonce_field('form', 'form-nonce') }}
+            </form>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6 col-sm-3">Jl. Kalimanjang 9 Surabaya<br>HP: ....<br>Fax: ...</div>
+    </div>
+            <h3>LOCATION</h3>
+        <div class="row">
+            <div id="map"></div>
+        </div><br><br>
+    </div>
+{% endblock %}

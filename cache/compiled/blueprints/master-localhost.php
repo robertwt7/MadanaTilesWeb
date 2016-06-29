@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1465639077,
-    'checksum' => '10057fb59af7ec93bb1c0e217bbebc32',
+    'timestamp' => 1467195143,
+    'checksum' => '3d9301606d27abd98a6299369fa8c320',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -47,13 +47,17 @@ return [
                 'file' => 'user/plugins/login/blueprints.yaml',
                 'modified' => 1461784048
             ],
+            'plugins/madanaEngine' => [
+                'file' => 'user/plugins/madanaEngine/blueprints.yaml',
+                'modified' => 1467077950
+            ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
                 'modified' => 1464442937
             ],
             'plugins/socialbutton' => [
                 'file' => 'user/plugins/socialbutton/blueprints.yaml',
-                'modified' => 1465639048
+                'modified' => 1465691261
             ]
         ]
     ],
@@ -977,6 +981,24 @@ return [
                     'type' => 'string'
                 ],
                 'name' => 'plugins.login.oauth.providers.Twitter.credentials.secret'
+            ],
+            'plugins.madanaEngine' => [
+                'type' => '_parent',
+                'name' => 'plugins.madanaEngine'
+            ],
+            'plugins.madanaEngine.enabled' => [
+                'type' => 'hidden',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.madanaEngine.enabled'
             ],
             'plugins.problems' => [
                 'type' => '_parent',
@@ -2480,6 +2502,9 @@ return [
                             ]
                         ]
                     ]
+                ],
+                'madanaEngine' => [
+                    'enabled' => 'plugins.madanaEngine.enabled'
                 ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
