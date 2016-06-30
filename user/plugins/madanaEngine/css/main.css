@@ -1,0 +1,36 @@
+#hidden{
+    display: none;
+    position: fixed;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);    
+}
+
+#hidden div{
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    margin-top: 2.5%;
+    position: relative;
+}
+
+#hidden div iframe{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+#hidden div button.close h2{
+    margin: 0;
+}
+
+#hidden div .close{
+    border-radius: 30%;
+    background: white;
+    position: absolute;
+    top: -25px; right: -25px;
+    font-weight: bold;
+}

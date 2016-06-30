@@ -14,3 +14,5 @@ asdasd.pngy*hex^asdasd
 sdsd.pngn*hex^sdsd
 dsa.pngn*hex^dsa
 yes.pngy*hex^yes
+
+Hexamili.pngn*hex^Hexamili

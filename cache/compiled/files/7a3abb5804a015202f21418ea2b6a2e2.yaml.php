@@ -2,12 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/xampp/htdocs/grav/user/plugins/madanaEngine/blueprints.yaml',
-    'modified' => 1467077950,
+    'modified' => 1467303494,
     'data' => [
         'name' => 'MadanaEngine',
-        'version' => '0.0.1',
+        'version' => '0.0.2',
         'description' => 'Function of MadanaEngine',
-        'icon' => 'share-alt',
+        'icon' => 'diamond',
         'author' => [
             'name' => 'Benyamin and Gabz Melon'
         ],

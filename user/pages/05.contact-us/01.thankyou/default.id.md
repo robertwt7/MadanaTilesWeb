@@ -46,5 +46,5 @@ form:
             display: thankyou
 ---
 
-# My Form
-##Thanks You!
+# Terima kasih
+##Terima kasih kami akan berusaha membalasnya dalam waktu 24 jam!

@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="css/pages.css" type="text/css" />
 <link rel="stylesheet" href="main.css" type="text/css" />
-<link rel="stylesheet" href="../user/themes/madana/css/newcss.css" type="text/css" />
+<link rel="stylesheet" href="../../user/themes/madana/css/newcss.css" type="text/css" />
 <script src="js/bootstrap.min.js" /></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
@@ -275,7 +275,7 @@ else $d = 1;
 </html>
 <?php
     } else {
-		header('Location:administrator.php');
+		header('Location: 404');
 	}
 ?>
 <script>
